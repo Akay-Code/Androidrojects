@@ -4,13 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.text.Layout
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.cardview.widget.CardView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("ResourceAsColor", "WrongViewCast", "MissingInflatedId")
@@ -35,9 +32,9 @@ class MainActivity : AppCompatActivity() {
             mainLayout.setBackgroundColor(R.color.white)
         }
 
-        val nextscreen = findViewById<Button>(R.id.newScreenBtn)
+        val nextScreen = findViewById<Button>(R.id.newScreenBtn)
 
-        nextscreen.setOnClickListener{
+        nextScreen.setOnClickListener{
             //open a new activity
             intent = Intent(applicationContext ,MainActivity2::class.java)
             startActivity(intent)
@@ -48,6 +45,11 @@ class MainActivity : AppCompatActivity() {
 
         runWebsite.setOnClickListener{
             intent = Intent(applicationContext , MainActivity3::class.java)
+            startActivity(intent)
+        }
+
+        passContent.setOnClickListener{
+            intent = Intent(this , PassContent::class.java )
             startActivity(intent)
         }
 

@@ -79,5 +79,11 @@
         android:layout_margin="10dp"
         />
 
+    <Button
+        android:id="@+id/passContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Passing intent" />
+
 
 </LinearLayout>
